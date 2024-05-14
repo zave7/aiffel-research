@@ -11,3 +11,8 @@ GPT-4 발표한 오픈AI '샘 알트만', "AI가 사회를 재구성할 것이�
 [![인터뷰 영상](https://img.youtube.com/vi/540vzMlf-54/0.jpg)](https://www.youtube.com/watch?v=540vzMlf-54&t=1s)
 
 [참조](https://www.aitimes.kr/news/articleView.html?idxno=27595)
+
+### *회고*
+- Git의 기본적인 내용에 대해 복습하는 시간을 가질 수 있었다.
+- 마크다운의 기능들을 한번씩 훑어봤다.
+- DVCS는 협업에 있어서 정말 중요한 요소니 함께 잘 사용할 수 있도록 하는게 중요하다고 생각한다.
