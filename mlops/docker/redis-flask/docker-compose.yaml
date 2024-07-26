@@ -1,0 +1,17 @@
+services:
+    redis:
+        image: redislabs/redismod
+        ports: 
+            - 6379:6379
+    web:
+        build:
+            context: .
+            target: builder
+        ports:
+            - 8000:8000
+        volumes:
+            - type: bind
+              source: ./app.py
+              target: /code/app.py
+        depends_on:
+            - redis
