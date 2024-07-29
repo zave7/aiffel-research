@@ -13,6 +13,6 @@ COPY ./*.py /app/
 
 WORKDIR /app
 
-ENTRYPOINT ["python3", "data_generator.py", "--db-host"]
+ENTRYPOINT ["python3", "data_generator.py"]
 
-CMD ["localhost"]
+CMD ["--db-host", "localhost", "--dataset", "iris"]

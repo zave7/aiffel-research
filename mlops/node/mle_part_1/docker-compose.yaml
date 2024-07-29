@@ -12,7 +12,7 @@ services:
       - 5432:5432
     healthcheck:
       test: ["CMD", "pg_isready", "-q", "-U", "myuser", "-d", "mydatabase"]
-      interval: 10s
+      interval: 5s
       timeout: 5s
       retries: 5
   
@@ -21,7 +21,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: data-generator
-    command: ["postgres-server"]
+    command: ["--db-host", "postgres-server", "--dataset", "${DATA:-iris}"]
     depends_on:
       postgres-server:
         condition: service_healthy
