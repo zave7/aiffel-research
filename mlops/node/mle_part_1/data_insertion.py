@@ -35,7 +35,7 @@ def insert_data(db_connect, dataset, data):
     elif dataset == "california_housing":
         insert_row_query = f"""
         INSERT INTO california_housing
-        (timestamp, med_inc, house_age, ave_rooms, ave_bedrms, population, ave_occup, latitude, longitude, medHouseVal)
+        (timestamp, med_inc, house_age, ave_rooms, ave_bedrms, population, ave_occup, latitude, longitude, med_house_val)
         VALUES (
             NOW(),
             {data.MedInc},
