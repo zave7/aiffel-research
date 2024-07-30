@@ -1,0 +1,8 @@
+[34m[1mwandb[39m[22m:   1 of 1 files downloaded.
+Traceback (most recent call last):
+  File "/Users/zave/Private/dev/learning/aiffel-research/mlops/node/mle_part_2/load_model_from_wandb.py", line 27, in <module>
+    model_pipeline_load = joblib.load(artifact_dir + "/model_pipeline_wandb.joblib")
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/site-packages/joblib/numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/zave/Private/dev/learning/aiffel-research/mlops/node/mle_part_2/artifacts/sk_model:v2/model_pipeline_wandb.joblib'
+/Users/zave/Private/dev/learning/aiffel-research/mlops/node/mle_part_2/artifacts/sk_model:v2

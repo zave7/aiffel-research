@@ -1,0 +1,6 @@
+/Users/zave/Private/dev/learning/aiffel-research/mlops/node/mle_part_2/artifacts/sk_model:v3
+Load Model Train Accuracy : 0.975
+Load Model Valid Accuracy : 1.0
+[34m[1mwandb[39m[22m:   1 of 1 files downloaded.
+/Users/zave/Private/dev/learning/aiffel-research/mlops/node/mle_part_2/load_model_from_wandb.py:36: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql("SELECT * FROM iris_data ORDER BY id DESC LIMIT 100", db_connect)

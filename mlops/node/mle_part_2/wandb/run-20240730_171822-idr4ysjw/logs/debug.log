@@ -1,0 +1,103 @@
+2024-07-30 17:18:22,064 INFO    MainThread:64566 [wandb_setup.py:_flush():76] Current SDK version is 0.17.5
+2024-07-30 17:18:22,064 INFO    MainThread:64566 [wandb_setup.py:_flush():76] Configure stats pid to 64566
+2024-07-30 17:18:22,064 INFO    MainThread:64566 [wandb_setup.py:_flush():76] Loading settings from /Users/zave/.config/wandb/settings
+2024-07-30 17:18:22,065 INFO    MainThread:64566 [wandb_setup.py:_flush():76] Loading settings from /Users/zave/Private/dev/learning/aiffel-research/mlops/node/mle_part_2/wandb/settings
+2024-07-30 17:18:22,065 INFO    MainThread:64566 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'api_key': '***REDACTED***'}
+2024-07-30 17:18:22,065 INFO    MainThread:64566 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-07-30 17:18:22,065 INFO    MainThread:64566 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'mlops/node/mle_part_2/load_model_from_wandb.py', 'program_abspath': '/Users/zave/Private/dev/learning/aiffel-research/mlops/node/mle_part_2/load_model_from_wandb.py', 'program': '/Users/zave/Private/dev/learning/aiffel-research/mlops/node/mle_part_2/load_model_from_wandb.py'}
+2024-07-30 17:18:22,065 INFO    MainThread:64566 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-07-30 17:18:22,065 INFO    MainThread:64566 [wandb_init.py:_log_setup():529] Logging user logs to /Users/zave/Private/dev/learning/aiffel-research/mlops/node/mle_part_2/wandb/run-20240730_171822-idr4ysjw/logs/debug.log
+2024-07-30 17:18:22,065 INFO    MainThread:64566 [wandb_init.py:_log_setup():530] Logging internal logs to /Users/zave/Private/dev/learning/aiffel-research/mlops/node/mle_part_2/wandb/run-20240730_171822-idr4ysjw/logs/debug-internal.log
+2024-07-30 17:18:22,065 INFO    MainThread:64566 [wandb_init.py:init():569] calling init triggers
+2024-07-30 17:18:22,065 INFO    MainThread:64566 [wandb_init.py:init():576] wandb.init called with sweep_config: {}
+config: {}
+2024-07-30 17:18:22,065 INFO    MainThread:64566 [wandb_init.py:init():619] starting backend
+2024-07-30 17:18:22,065 INFO    MainThread:64566 [wandb_init.py:init():623] setting up manager
+2024-07-30 17:18:22,069 INFO    MainThread:64566 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2024-07-30 17:18:22,072 INFO    MainThread:64566 [wandb_init.py:init():631] backend started and connected
+2024-07-30 17:18:22,074 INFO    MainThread:64566 [wandb_init.py:init():720] updated telemetry
+2024-07-30 17:18:22,089 INFO    MainThread:64566 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2024-07-30 17:18:23,560 INFO    MainThread:64566 [wandb_run.py:_on_init():2435] communicating current version
+2024-07-30 17:18:24,319 INFO    MainThread:64566 [wandb_run.py:_on_init():2444] got version response 
+2024-07-30 17:18:24,319 INFO    MainThread:64566 [wandb_init.py:init():804] starting run threads in backend
+2024-07-30 17:18:27,769 INFO    MainThread:64566 [wandb_run.py:_console_start():2413] atexit reg
+2024-07-30 17:18:27,769 INFO    MainThread:64566 [wandb_run.py:_redirect():2255] redirect: wrap_raw
+2024-07-30 17:18:27,769 INFO    MainThread:64566 [wandb_run.py:_redirect():2320] Wrapping output streams.
+2024-07-30 17:18:27,769 INFO    MainThread:64566 [wandb_run.py:_redirect():2345] Redirects installed.
+2024-07-30 17:18:27,771 INFO    MainThread:64566 [wandb_init.py:init():847] run started, returning control to user process
+2024-07-30 17:18:31,909 INFO    MainThread:64566 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/site-packages/urllib3/connectionpool.py", line 715, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1060, in _validate_conn
+    conn.connect()
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/ssl.py", line 501, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/ssl.py", line 1074, in _create
+    self.do_handshake()
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/ssl.py", line 1343, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 54] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/site-packages/urllib3/connectionpool.py", line 801, in urlopen
+    retries = retries.increment(
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/site-packages/urllib3/util/retry.py", line 552, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/site-packages/urllib3/connectionpool.py", line 715, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1060, in _validate_conn
+    conn.connect()
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/ssl.py", line 501, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/ssl.py", line 1074, in _create
+    self.do_handshake()
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/ssl.py", line 1343, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 345, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/site-packages/wandb/sdk/lib/gql_request.py", line 58, in execute
+    request = self.session.post(self.url, **post_args)
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/site-packages/requests/adapters.py", line 682, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))
+2024-07-30 17:19:01,275 WARNING MsgRouterThr:64566 [router.py:message_loop():77] message_loop has been closed

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/zave/Private/dev/learning/aiffel-research/mlops/node/mle_part_2/save_model_to_wandb.py", line 52, in <module>
+    artifact.add_file("model_pipeline_wandb.joblib")
+  File "/Users/zave/anaconda3/envs/aiffel-research/lib/python3.9/site-packages/wandb/sdk/artifacts/artifact.py", line 1185, in add_file
+    raise ValueError("Path is not a file: {}".format(local_path))
+ValueError: Path is not a file: model_pipeline_wandb.joblib
