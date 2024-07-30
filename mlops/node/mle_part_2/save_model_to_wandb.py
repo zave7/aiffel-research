@@ -1,7 +1,6 @@
-import os
+import wandb
 from argparse import ArgumentParser
 
-import mlflow
 import pandas as pd
 import psycopg2
 from sklearn.metrics import accuracy_score
@@ -10,11 +9,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 
-# 0. set mlflow environments
-os.environ["MLFLOW_S3_ENDPOINT_URL"] = "http://localhost:9000"
-os.environ["MLFLOW_TRACKING_URI"] = "http://localhost:5001"
-os.environ["AWS_ACCESS_KEY_ID"] = "minio"
-os.environ["AWS_SECRET_ACCESS_KEY"] = "miniostorage"
+import joblib
 
 # 1. get data
 db_connect = psycopg2.connect(
@@ -43,24 +38,19 @@ valid_acc = accuracy_score(y_true=y_valid, y_pred=valid_pred)
 print("Train Accuracy :", train_acc)
 print("Valid Accuracy :", valid_acc)
 
-# 3. save model
-parser = ArgumentParser()
-parser.add_argument("--model-name", dest="model_name", type=str, default="sk_model")
-args = parser.parse_args()
+joblib.dump(model_pipeline, "model_pipeline_wandb.joblib")
 
-mlflow.set_experiment("new-exp")
+# weight and bias
 
-signature = mlflow.models.signature.infer_signature(model_input=X_train, model_output=train_pred)
-input_sample = X_train.iloc[:10]
+# Initialize a new run
+run = wandb.init(project="pipeline-test", job_type="train")
 
-with mlflow.start_run():
-    mlflow.log_metrics({"train_acc": train_acc, "valid_acc": valid_acc})
-    mlflow.sklearn.log_model(
-        sk_model=model_pipeline,
-        artifact_path=args.model_name,
-        signature=signature,
-        input_example=input_sample,
-    )
+metrics = {"train_acc": train_acc, "valid_acc":valid_acc}
+artifact = wandb.Artifact("sk_model", type="model", description="support vector machine",
+               metadata={"metrics": metrics})
 
-# 4. save data
-df.to_csv("data.csv", index=False)
+artifact.add_file("model_pipeline_wandb.joblib")
+
+run.log_artifact(artifact)
+
+run.finish()
