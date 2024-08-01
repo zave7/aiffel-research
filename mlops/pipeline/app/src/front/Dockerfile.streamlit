@@ -1,0 +1,10 @@
+FROM python:3.9-slim
+
+RUN pip install -U pip \
+&& pip install streamlit
+
+WORKDIR /app
+
+COPY streamlit.py streamlit.py
+
+ENTRYPOINT ["streamlit", "run", "streamlit.py"]

@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+  fastapi:
+    build:
+      context: ./app/
+      dockerfile: Dockerfile.fastapi
+    container_name: api-inference
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+  db:
+    build: 
+      context: .
+      dockerfile: Dockerfile.mysql
+    container_name: db-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=1234
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - 3305:3306
+  front-app:
+    build: 
+      context: ./app/src/front/
+      dockerfile: Dockerfile.streamlit
+    container_name: front-app
+    ports:
+      - 8501:8501
+    command: ["--", "--host-api", "http://api-inference", "--port-api", "8000", "--path-api", "/predict"]
+    depends_on:
+      - fastapi
+    
+volumes:
+  db_data:
